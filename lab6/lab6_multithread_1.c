@@ -19,15 +19,6 @@ struct file_paras
     char *dpath;
 };
 // 首先实现文件到文件的拷贝
-int files = 0;
-char *copyfileQueue_spath[1000]
-char *copyfileQueue_dpath[1000]
-void appendCopyfileQueue(char *spath, char *dpath)
-{
-    copyfileQueue_spath[files] = spath;
-    copyfileQueue_dpath[files] = dpath;
-    files++;
-}
 void copyfile(void *arg)
 {
     struct file_paras *fp = (struct file_paras *)arg;
