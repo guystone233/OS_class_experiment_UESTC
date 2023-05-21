@@ -32,6 +32,7 @@ while true; do
     else
         filesize=`ls -l $filename | cut -d " " -f 5`
         echo "File ${filename} size changed."
+        unchanged=0
         changed=`expr $changed + 1`
         if [ $changed -eq 2 ]; then
             echo "The file has been changed for 2 times."
